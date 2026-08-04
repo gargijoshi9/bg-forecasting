@@ -1,0 +1,43 @@
+# Data & Model Directories (Ignore contents but keep the directory structure in Git)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+models/*
+!models/.gitkeep
+results/*
+!results/.gitkeep
+
+# Raw and Processed data files (globally ignored)
+*.csv
+*.xml
+
+# Model weights, checkpoints, and serialization files
+*.pt
+*.pth
+*.pkl
+
+# Python environment and package dependencies
+venv/
+.env
+
+# Python byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDEs & Editor configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS-specific files (macOS)
+.DS_Store
+Thumbs.db
