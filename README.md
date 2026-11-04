@@ -8,13 +8,21 @@ This repository contains continuous glucose monitoring (CGM) data analysis and f
 bg-forecasting/
 ├── data/
 │   ├── raw/                  # Apple Health export XML files (export.xml, export_cda.xml)
-│   └── processed/            # Cleaned CGM datasets (glucose_with_cycle.csv)
+│   └── processed/            # Modular processed datasets:
+│       ├── glucose_5min.csv      # Primary 5-minute CGM time series
+│       ├── cycle_events.csv      # Period start dates and cycle boundaries
+│       ├── stress_events.csv     # Manually annotated stress windows
+│       ├── wearable_metrics.csv  # Apple Watch HR and HRV measurements
+│       └── glucose_features.csv  # Final aligned modeling dataset
+├── src/
+│   └── build_datasets.py     # Deterministic pipeline script to generate all datasets
 ├── notebooks/
 │   ├── 01_eda.ipynb          # Exploratory Data Analysis, Hormone & Stress Mapping
 │   ├── 02_baseline_lstm.ipynb# Baseline LSTM forecasting model
 │   └── 03_tft_model.ipynb    # Temporal Fusion Transformer (TFT) model
 ├── models/                   # Saved model checkpoints
 ├── results/                  # Generated figures, plots, and metric reports
+├── DATA_DICTIONARY.md        # Comprehensive schemas, audit checklist & reconciliation
 └── README.md                 # Project documentation
 ```
 
