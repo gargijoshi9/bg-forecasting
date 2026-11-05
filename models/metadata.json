@@ -1,0 +1,36 @@
+{
+  "feature_cols": [
+    "glucose",
+    "glucose_min",
+    "glucose_max",
+    "glucose_std",
+    "time_sin",
+    "time_cos",
+    "day_of_week",
+    "is_weekend",
+    "cycle_day",
+    "cycle_length_days",
+    "days_to_next_period",
+    "is_menstrual_flow"
+  ],
+  "models": {
+    "h30m": {
+      "ridge_alpha": 0.1,
+      "ridge_test_mae": 14.140507794474507,
+      "xgboost_test_mae": 14.1614231298258,
+      "xgboost_test_r2": 0.9060223886447777
+    },
+    "h60m": {
+      "ridge_alpha": 1.0,
+      "ridge_test_mae": 25.088627772732757,
+      "xgboost_test_mae": 24.085787626695815,
+      "xgboost_test_r2": 0.7338493889745434
+    },
+    "h120m": {
+      "ridge_alpha": 0.1,
+      "ridge_test_mae": 39.636312123492964,
+      "xgboost_test_mae": 38.276162925311574,
+      "xgboost_test_r2": 0.3320863878555349
+    }
+  }
+}

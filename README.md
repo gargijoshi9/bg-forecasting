@@ -20,7 +20,15 @@ bg-forecasting/
 │   ├── 01_eda.ipynb          # Exploratory Data Analysis, Hormone & Stress Mapping
 │   ├── 02_baseline_lstm.ipynb# Baseline LSTM forecasting model
 │   └── 03_tft_model.ipynb    # Temporal Fusion Transformer (TFT) model
-├── models/                   # Saved model checkpoints
+├── models/                   # Serialized model checkpoints & metadata:
+│   ├── scaler.pkl                # Fitted StandardScaler on training partition
+│   ├── ridge_h30m.pkl            # Trained Ridge model (30m horizon)
+│   ├── ridge_h60m.pkl            # Trained Ridge model (60m horizon)
+│   ├── ridge_h120m.pkl           # Trained Ridge model (120m horizon)
+│   ├── xgboost_h30m.json         # Trained XGBoost model (30m horizon)
+│   ├── xgboost_h60m.json         # Trained XGBoost model (60m horizon)
+│   ├── xgboost_h120m.json        # Trained XGBoost model (120m horizon)
+│   └── metadata.json             # Model training metadata & validation metrics
 ├── results/                  # Generated figures, plots, and metric reports
 ├── DATA_DICTIONARY.md        # Comprehensive schemas, audit checklist & reconciliation
 └── README.md                 # Project documentation

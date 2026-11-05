@@ -1,0 +1,34 @@
+model_name,lookback_minutes,horizon_minutes,sample_count,mae,rmse,r2,mape,clinical_accuracy_pct,feature_set,num_features,alpha
+Persistence,60,30,3640,16.99,22.47,0.8649,10.61,85.77,None (Persistence),1,
+Ridge,60,30,3640,14.21,18.66,0.9068,9.2,90.05,FS1_Glucose_Only,4,1.0
+XGBoost,60,30,3640,14.06,18.69,0.9065,9.3,90.85,FS1_Glucose_Only,4,
+Ridge,60,30,3640,14.28,18.74,0.906,9.23,90.55,FS2_Glucose_Time,8,0.1
+XGBoost,60,30,3640,14.08,18.61,0.9072,9.4,89.84,FS2_Glucose_Time,8,
+Ridge,60,30,3640,14.14,18.59,0.9075,9.13,90.44,FS3_Glucose_Time_Cycle,12,0.1
+XGBoost,60,30,3640,14.16,18.74,0.906,9.47,90.11,FS3_Glucose_Time_Cycle,12,
+Ridge,60,30,3640,14.42,18.73,0.9061,9.52,89.29,FS4_Glucose_Time_Cycle_Stress,14,1.0
+XGBoost,60,30,3640,14.27,18.93,0.904,9.53,89.67,FS4_Glucose_Time_Cycle_Stress,14,
+Ridge,60,30,3640,14.45,18.75,0.9059,9.55,89.2,FS5_Full_MultiModal,16,1.0
+XGBoost,60,30,3640,14.2,18.92,0.9042,9.43,90.11,FS5_Full_MultiModal,16,
+Persistence,60,60,3634,29.67,38.34,0.6064,18.58,65.88,None (Persistence),1,
+Ridge,60,60,3634,25.24,32.3,0.7207,16.86,71.38,FS1_Glucose_Only,4,1.0
+XGBoost,60,60,3634,25.04,32.32,0.7203,16.71,73.09,FS1_Glucose_Only,4,
+Ridge,60,60,3634,25.31,32.5,0.7172,16.87,71.6,FS2_Glucose_Time,8,1.0
+XGBoost,60,60,3634,24.28,31.56,0.7332,15.96,74.82,FS2_Glucose_Time,8,
+Ridge,60,60,3634,25.09,32.23,0.7218,16.72,72.1,FS3_Glucose_Time_Cycle,12,1.0
+XGBoost,60,60,3634,24.09,31.52,0.7338,15.7,74.79,FS3_Glucose_Time_Cycle,12,
+Ridge,60,60,3634,25.7,32.62,0.715,17.69,70.36,FS4_Glucose_Time_Cycle_Stress,14,1.0
+XGBoost,60,60,3634,24.33,31.72,0.7305,15.8,74.77,FS4_Glucose_Time_Cycle_Stress,14,
+Ridge,60,60,3634,25.72,32.64,0.7147,17.71,70.25,FS5_Full_MultiModal,16,1.0
+XGBoost,60,60,3634,24.25,31.81,0.7289,15.74,74.16,FS5_Full_MultiModal,16,
+Persistence,60,120,3622,48.01,60.97,-0.0006,30.82,45.75,None (Persistence),1,
+Ridge,60,120,3622,39.9,50.13,0.3235,27.58,52.87,FS1_Glucose_Only,4,10.0
+XGBoost,60,120,3622,40.4,50.8,0.3054,27.96,52.73,FS1_Glucose_Only,4,
+Ridge,60,120,3622,39.93,50.62,0.3104,27.55,53.78,FS2_Glucose_Time,8,1.0
+XGBoost,60,120,3622,37.28,48.46,0.368,25.06,57.87,FS2_Glucose_Time,8,
+Ridge,60,120,3622,39.64,50.19,0.3219,27.23,53.04,FS3_Glucose_Time_Cycle,12,0.1
+XGBoost,60,120,3622,38.28,49.81,0.3321,24.59,55.66,FS3_Glucose_Time_Cycle,12,
+Ridge,60,120,3622,40.9,51.23,0.2935,29.38,51.74,FS4_Glucose_Time_Cycle_Stress,14,1.0
+XGBoost,60,120,3622,38.27,49.85,0.3312,24.61,55.83,FS4_Glucose_Time_Cycle_Stress,14,
+Ridge,60,120,3622,40.92,51.25,0.2931,29.4,51.66,FS5_Full_MultiModal,16,1.0
+XGBoost,60,120,3622,37.99,49.53,0.3397,24.46,56.54,FS5_Full_MultiModal,16,

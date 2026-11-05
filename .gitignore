@@ -1,35 +1,51 @@
-# Data & Model Directories (Ignore contents but keep the directory structure in Git)
+# ==========================================
+# 1. Raw & Clinical Data (Strictly Ignored)
+# ==========================================
 data/raw/*
 !data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
-models/*
-!models/.gitkeep
-results/*
-!results/.gitkeep
-
-# Raw and Processed data files (globally ignored)
-*.csv
 *.xml
 
-# Model weights, checkpoints, and serialization files
+# ==========================================
+# 2. Processed Personal Health Data (Strictly Ignored)
+# ==========================================
+data/processed/*
+!data/processed/.gitkeep
+
+# ==========================================
+# 3. Model Weights & Serialized Artifacts
+# ==========================================
+# Globally ignore Python pickles and PyTorch weights
+*.pkl
 *.pt
 *.pth
-*.pkl
 
-# Python environment and package dependencies
+# Models directory: ignore by default, whitelist metadata.json and XGBoost JSON checkpoints
+models/*
+!models/.gitkeep
+!models/metadata.json
+!models/xgboost_*.json
+
+# ==========================================
+# 4. Research Results & Visualizations
+# ==========================================
+# Keep personal visualization plots private (contain personal curves, dates & stress traces)
+results/*.png
+
+# Allow aggregated research benchmark CSVs
+!results/feature_ablation_study.csv
+!results/forecasting_experiments.csv
+!results/sequence_generation_audit.csv
+!results/.gitkeep
+
+# ==========================================
+# 5. Environment & Temporary Files
+# ==========================================
 venv/
 .env
-
-# Python byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Jupyter Notebook checkpoints
 .ipynb_checkpoints/
-
-# IDEs & Editor configurations
 .vscode/
 .idea/
 *.suo
@@ -37,7 +53,5 @@ __pycache__/
 *.njsproj
 *.sln
 *.swp
-
-# OS-specific files (macOS)
 .DS_Store
 Thumbs.db
